@@ -1,19 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: 'export',
+  // GitHub Pages uses the repository name as the base path
+  basePath: '/portfolio',
   images: {
-    unoptimized: false, // Keep image optimization enabled
-    // domains: ["aarab.vercel.app"],
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "aarab.vercel.app",
-        port: "",
-        pathname: "/**",
-      },
-    ],
+    unoptimized: true,
   },
-
+  distDir: 'dist',
   compress: true,
 
   experimental: {

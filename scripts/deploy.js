@@ -1,5 +1,6 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
+const path = require('path');
 
 // Get repository name from git remote
 try {
@@ -7,7 +8,7 @@ try {
   console.log('Remote URL:', remoteUrl);
   
   // Extract repository name from URL
-  const repoMatch = remoteUrl.match(/github\.com[\/:]([\w-]+)\/([\w-]+)\.git/);
+  const repoMatch = remoteUrl.match(/github\.com[\/:]([\w-]+)\/([\w-]+)(\.git)?/);
   if (!repoMatch) {
     console.error('Could not extract repository name from remote URL');
     process.exit(1);
@@ -22,10 +23,6 @@ try {
   // Build the project
   console.log('Building the project...');
   execSync('npm run build', { stdio: 'inherit' });
-  
-  // Export the static files
-  console.log('Exporting static files...');
-  execSync('npm run export', { stdio: 'inherit' });
   
   // Ensure out directory exists
   if (!fs.existsSync('out')) {
@@ -43,7 +40,7 @@ try {
       if (isDirectory) {
         fs.mkdirSync(dest, { recursive: true });
         fs.readdirSync(src).forEach(childItemName => {
-          copyRecursiveSync(`${src}/${childItemName}`, `${dest}/${childItemName}`);
+          copyRecursiveSync(path.join(src, childItemName), path.join(dest, childItemName));
         });
       } else {
         fs.copyFileSync(src, dest);

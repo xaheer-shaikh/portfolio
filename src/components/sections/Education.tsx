@@ -6,6 +6,16 @@ import { educationData } from "@/constant";
 import { ExperienceCard } from "../Cards";
 import { nasalization } from "@/app/fonts";
 
+// Define the type for education data
+interface EducationItem {
+  role: string;
+  year: string;
+  description: string[];
+  company: string;
+  technologies: string[];
+  url: string;
+}
+
 export function Education() {
   const ref = useRef(null);
   const isInView = useInView(ref, {
@@ -99,7 +109,7 @@ export function Education() {
           />
 
           <div className="space-y-12">
-            {educationData.map((edu: any, index: number) => (
+            {educationData.map((edu: EducationItem, index: number) => (
               <ExperienceCard
                 key={`${edu.company}-${index}`}
                 role={edu.role}
