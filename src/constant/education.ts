@@ -1,0 +1,63 @@
+export const educationData = [
+  {
+    role: "Bachelor of Engineering (B.E.) – Computer Science Engineering",
+    year: "2024 – Present",
+    description: [
+      "Final year student with strong focus on Software Development, Databases, and Operating Systems.",
+      "Key coursework: Data Structures & Algorithms, DBMS, Software Development, Computer Networks.",
+      "Academic projects: Google Gemini Clone, ZenTrade App, ZenMusic App.",
+      "Skills developed: Full-stack development (React, Node.js, Flutter), AI integration, API handling.",
+    ],
+    company: "University of Mumbai",
+    technologies: [
+      "Data Structures & Algorithms",
+      "DBMS",
+      "Software Development",
+      "Computer Networks",
+      "React",
+      "Node.js",
+      "Flutter",
+      "AI Integration",
+      "API Handling",
+    ],
+    url: "https://www.mu.ac.in/",
+  },
+  {
+    role: "Diploma in Computer Engineering",
+    year: "2023 – 2024",
+    description: [
+      "Learned core computer engineering concepts: Programming (C, C++, Java, Python), Database Management, Networking, and Software Development.",
+      "Completed mini-projects: Calculator app, Chatbot, Simple Web Apps.",
+      "Achievements: Consistently high grades in programming and database subjects.",
+    ],
+    company: "MSBTE, Mumbai",
+    technologies: [
+      "C",
+      "C++",
+      "Java",
+      "Python",
+      "Database Management",
+      "Networking",
+      "Software Development",
+    ],
+    url: "https://msbte.org.in/",
+  },
+  {
+    role: "Cybersecurity Learner / CEH Trainee",
+    year: "Mar'25 - Present",
+    description: [
+      "Pursuing Certified Ethical Hacker (CEH) training to strengthen knowledge in cybersecurity, penetration testing, and vulnerability assessment.",
+      "Hands-on experimentation with ethical hacking tools, network security simulations, and code-level security testing.",
+      "Documenting findings and improving practical skills to apply cybersecurity principles in software development projects.",
+    ],
+    company: "Self-Learning / CEH Program",
+    technologies: [
+      "Ethical Hacking",
+      "Penetration Testing",
+      "Network Security",
+      "Vulnerability Assessment",
+      "Linux / Tools",
+    ],
+    url: "#",
+  },
+];
